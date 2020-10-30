@@ -1,0 +1,13 @@
+.container-hello-word {
+    width: 250px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: brown;
+    color: wheat;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.container-hello-word:hover {
+    background-color: red;
+}
