@@ -7,9 +7,10 @@ import './button.css';
 //shape = square, round | dafault: round
 //color = #******
 
-const Button = ({ text, color, proporcion, size, shape, inverted }) => {
+const Button = ({ text, color, proporcion, size, shape, inverted, callback }) => {
 
     const [classButton, setClassButton] = useState('');
+    const [pressed, setPressed] = useState('');
 
     color = color ?? '#FFFFFF'; //VER COMO MAPEAR NOMBRE A CODIGO
 
@@ -53,13 +54,28 @@ const Button = ({ text, color, proporcion, size, shape, inverted }) => {
 
     }
 
+    /*const onMouseHandler = (event) => {
+        setClassButton(classButton + ' pressed');
+        callback (event);
+    } */   
+
+    const onMouseHandler = (pressed) => {
+        if(pressed)
+        setPressed(' pressed');
+        else
+        setPressed('');
+    }  
+
     useEffect(() => {
         if (inverted)
-            setClassButton('inverted')
+            setClassButton('inverted');
+        else
+            setClassButton('');
     }, [])
 
+    console.log(classButton);
     return (
-        <button style={styleButton} className={classButton}>
+        <button style={styleButton} className={classButton + pressed} onMouseDown ={() => onMouseHandler(true)} onMouseUp ={() => onMouseHandler(false)}>
             {text}
         </button>
     )
@@ -96,7 +112,6 @@ function hexToL(H) {
         l = 0;
     l = (cmax + cmin) / 2;
     l = +(l * 100).toFixed(1);
-    console.log('L de función' + l);
     return l;
 }
 
