@@ -4,7 +4,7 @@ import Navbar from '../components/navbar/Navbar.js';
 const NavbarTest = () => {
     return (
         <Fragment>
-            <div class="container bg-light ">
+            <div class="container">
                 <h1>
                     Wellcome to Navbar Test
                 </h1>

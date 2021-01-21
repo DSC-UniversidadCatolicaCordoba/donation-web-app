@@ -21,10 +21,13 @@ const Navbar = () => {
     }
 
     return (
-        <div className='navbar'>
+        <div className='navbar align-items-center'>
             <div className='search-container'>
-                <div className='row'>
+                <div className='row align-items-center'>
+                    <div className='col-1 icon'>
                         <i className='fa fa-search'></i>
+                    </div>
+                    <div className='col-9'>
                         <input
                             className='search'
                             type='text'
@@ -39,6 +42,9 @@ const Navbar = () => {
                                     return null
                             }}
                         />
+                        <div className='col-1'>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
