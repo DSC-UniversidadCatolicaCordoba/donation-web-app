@@ -1,0 +1,55 @@
+.navbar {
+    height: 2.7rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.search-container {
+    /* contendor del buscador*/
+    margin-left: 25%;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: #EEF0F5;
+    border-width: 0 px;
+    border-color: rgba(245, 245, 245, 0.7);
+    border-radius: 20px;
+    box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
+    text-align: center;
+    align-items: center;
+}
+
+.icon {
+    /* */
+    margin-left: 3%;
+    position: relative;
+    float: left;
+    color: var(--dark-color);
+}
+
+.search {
+    /* Buscar ... */
+    position: relative;
+    background: none;
+    box-shadow: none;
+    float: right;
+    
+    width: 100%;
+
+    /* tipografia */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+
+    /* alineacion*/
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+
+    /*eliminacion de input**/
+    outline: none;
+    border: 0;
+
+    color:var(--dark-color);
+}

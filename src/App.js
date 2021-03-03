@@ -11,6 +11,7 @@ function App() {
       <AppTest></AppTest>
       <Switch>
         <Route exact path='/' component={HomePage}></Route>
+        <Route exact path='/something' component={HomePage}></Route>
       </Switch>
     </Router>
   );
