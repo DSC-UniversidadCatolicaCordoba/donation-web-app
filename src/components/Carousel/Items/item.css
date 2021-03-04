@@ -1,9 +1,9 @@
-#card{
-    background: #E1E1E1;
-    border-radius: 20px;
-    margin: 40px;
-    padding: 40px;
+.donar{
+    float: right !important;
+}
+
+.card{
     background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
     box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-    border-radius: 40px;
+    border-radius: 60px;
 }

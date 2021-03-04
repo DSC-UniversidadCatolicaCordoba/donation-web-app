@@ -2,6 +2,7 @@ import { CardActions, CardContent } from "@material-ui/core";
 import React from "react";
 import Card from '@material-ui/core/Card';
 import Button from "../../Button/Button";
+import '../Items/item.css';
 
 
 
@@ -10,13 +11,13 @@ export default function Item(props) {
   console.log(itemInfo);
 
     return (
-        <Card>
+        <Card className="card">
           <CardContent>
           <h2>{itemInfo.name}</h2>
           <p>{itemInfo.description}</p>
           </CardContent>
           <CardActions>
-            <Button size="s" text="Ir al portal"></Button>
+          <Button color="#2725B7" size="l" proporcion="5" text="Ir al portal" className="donar"></Button>
           </CardActions>
         </Card>
       );

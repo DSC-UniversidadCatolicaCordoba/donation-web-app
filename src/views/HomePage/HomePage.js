@@ -3,7 +3,6 @@ import Carousel from '../../components/Carousel/Estructura/Carousel'
 import NavBar from '../../components/NavBar/NavBar'
 import Card from '../../components/Card/Card'
 import '../../styles/homepage.css';
-import Example from '../../components/Carousel/Estructura/Carousel';
 import { Container } from '@material-ui/core';
 import ItemList from '../../components/ItemList/ItemList'
 import Button from '../../components/Button/Button'
@@ -38,7 +37,7 @@ const HomePage = () => {
         <Container>
             <h1>Causas a donar</h1>
             <p>Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto, texto, texto. Creo que con esto ya esta bien.</p>
-            <div className="row">
+            <div className="row" id="row1">
                <div className="columns">
                    <Card name="Portal UCC" description="Hola"></Card>
                </div>
@@ -54,6 +53,7 @@ const HomePage = () => {
     
         <Container className="ayuda">
             <h1 className="titulo">Como puedes ayudar?</h1>
+            
             <Container>
                 <div className="row">
                 <div className="col">

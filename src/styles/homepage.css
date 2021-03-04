@@ -1,5 +1,5 @@
 .carousel{
-    padding: 10px !important;
+    padding: 40px !important;
 }
 
 .ayuda{
@@ -28,7 +28,14 @@
 .titulo{
     width: 550px !important;
     height: 44px !important;
-    margin-top: 0px;
-    margin: 5px;
+    margin: 0px !important;
 
+}
+
+h1,p{
+    text-align: center;
+}
+
+#row1{
+    padding-left: 100px;
 }
