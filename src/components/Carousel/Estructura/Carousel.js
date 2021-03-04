@@ -4,19 +4,29 @@ import Item from "../Items/Item"
 
 
 
-function MostrarTarjetas(props){
+function MostrarTarjetas(){
 
-const item = {
-        name: "Portal Milagro UCC",
+const array = [
+        { name: "Portal Milagro UCC",
         description: "Probably the most random thing you have ever seen!",
-    
-    };
+        },
+        {
+            name: "Portal UCC",
+            description: "Funcionaa"
+        },
+        {
+            name: "Otro portal",
+            description: "Funciona o me mato"
+        }    
+    ]
+
+    const arrayItems = array.map( (item, i) => <Item key={i} itemInfo={item} /> )
 
     return (
         <Carousel>
-            {
-                item.map( (item, i) => <Item key={i} itemInfo={item} /> )
-            }
+            
+            {arrayItems}
+
         </Carousel>
     )
 }
