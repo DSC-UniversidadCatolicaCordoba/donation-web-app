@@ -12,17 +12,23 @@ import Item from "../../components/Carousel/Items/Item"
 
 const HomePage = () => {
     const items1 = [
-        {id: 1, title: 'Hello World'},
+        {id: 1, title: "Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto texto texto"},
         {id: 2, title: "Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto texto texto"
         },
       ];
 
       const items2 = [
-        {id: 1, title: 'Hello World'},
-        {id: 2, title: 'Installation'},
-        {id: 3, title: 'Installation'},
-        {id: 4, title: 'Installation'}
+        {id: 1, title: "Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto texto texto"},
+       
+        {id: 3, title: "Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto texto texto"},
+        
       ];
+      
+      const items3 = [
+        {id: 2, title: "Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto texto texto"},
+        {id: 4, title: "Texto sobre donaciones, aca hablamos de donacion, ya dije que es un texto sin sentido que sirva nada mas para hacer texto texto texto"}
+      ];
+
     return (
         <Fragment>
         <div>
@@ -61,11 +67,26 @@ const HomePage = () => {
                 <Button color="#2725B7" size="l" proporcion="10" text="Ir a donar" className="donar"></Button>
                 </div>
                 <div className="col imagen">
-                <img  src={'https://asepyme.com/wp-content/uploads/2019/09/don-2706851_640.jpg'} alt='' className="responsive"/>
+                <img  src={'https://asepyme.com/wp-content/uploads/2019/09/don-2706851_640.jpg'} alt='' className="responsive" id="imagen"/>
                 </div>
                 </div>
             </Container>
            
+        </Container>
+
+        <Container className="registro">
+            <Container>
+            <h1>Como registro mi organización?</h1>
+            <div className="row">
+                <div className="col">
+                <ItemList items={items2}></ItemList>
+                </div>
+                <div className="col">
+                    <ItemList items={items3}></ItemList>
+                </div>
+                </div>
+
+        </Container>
         </Container>
         
         </Fragment>

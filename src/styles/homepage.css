@@ -4,7 +4,7 @@
 
 .ayuda{
     width: 1260px !important;
-    height:370px !important;
+    height: 494px !important;
     float: left;
 }
 
@@ -17,18 +17,20 @@
   height: auto;
 }
 
-.imagen{
-    width: 605px;
-    height: 494px;
+#imagen{
+    width: 605px !important;
+    height: 379px !important;
+    margin-top:-42px;
     background: #E1E1E1;
     box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
 }
 
 .titulo{
+    color: #2725B7;
     width: 550px !important;
     height: 44px !important;
-    margin: 0px !important;
+
 
 }
 
@@ -38,4 +40,14 @@ h1,p{
 
 #row1{
     padding-left: 100px;
+}
+
+.donar{
+    text-align: center;
+}
+
+.registro{
+    width: 1342px !important;
+    height: 573 !important;  
+    margin-top: 30px !important;
 }
