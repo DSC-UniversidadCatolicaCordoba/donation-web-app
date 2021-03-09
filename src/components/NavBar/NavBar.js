@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import '../NavBar/Navbar.css';
 import searchLogo from '../../resources/images/search.png';
-import menuLogo from '../../resources/images/menu.png';
 import userLogo from '../../resources/images/user.png'
-
+import Menu from '../Menu/Menu'
 export const name = 20;
 
 
@@ -26,7 +25,7 @@ const Navbar = () => {
     return (
         <div className='navbar align-items-center'>
             <div className="col-1 menuIcon">
-                <img src={menuLogo} className="menuLogo"></img>
+            <Menu></Menu>
             </div>
             <div className='search-container'>
                 <div className='row align-items-center'>
