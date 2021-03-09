@@ -25,7 +25,7 @@ export default function NumberList(props) {
     const items = props.items;
     const listItems = items.map((item) =>
       <div className="row">
-      <div className="col">
+      <div className="col" id="contorno">
       <Avatar className="avatar" key={item.id}>
         {item.id}
       </Avatar>

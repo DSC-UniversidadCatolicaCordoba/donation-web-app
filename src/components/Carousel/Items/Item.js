@@ -17,7 +17,7 @@ export default function Item(props) {
           <p>{itemInfo.description}</p>
           </CardContent>
           <CardActions>
-          <Button color="#2725B7" size="l" proporcion="5" text="Ir al portal" className="donar"></Button>
+          <Button color="#2725B7" size="l" proporcion="5" text="Ir al portal" id="donar"></Button>
           </CardActions>
         </Card>
       );

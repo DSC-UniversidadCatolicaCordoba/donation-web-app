@@ -1,5 +1,6 @@
 .avatar{
 	background-color: #F7AA80 !important;
+	margin: 0px !important;
 	width: 60px !important;
 	height: 60px !important;
 	color:black !important;
@@ -12,5 +13,11 @@
 
 .num{
 	margin-top: 34px;
+}
+
+#contorno{
+	margin-right: -271px  !important;
+	height: 70px !important;
+	width: 70px !important;
 }
 
