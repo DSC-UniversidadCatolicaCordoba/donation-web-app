@@ -1,30 +1,31 @@
-import React from 'react';
+import React,{ useState }from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import menuLogo from '../../resources/images/menu.png'
 
+
 export default function SimpleMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [selected, setSelected] = useState(null);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setSelected(event.currentTarget);
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setSelected(null);
   };
 
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-      <img src={menuLogo} className="menuLogo"></img>
+      <img src={menuLogo} className="menuLogo" alt=''></img>
       </Button>
       <Menu
         id="simple-menu"
-        anchorEl={anchorEl}
+        anchorEl={selected}
         keepMounted
-        open={Boolean(anchorEl)}
+        open={Boolean(selected)}
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>

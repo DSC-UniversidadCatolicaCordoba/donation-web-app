@@ -1,5 +1,5 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
-import Link from 'react';
+import React from 'react';
+
 import './Button.css';
 import { useHistory } from 'react-router-dom';
 
@@ -8,12 +8,10 @@ import { useHistory } from 'react-router-dom';
 //shape = square, round | dafault: round
 //color = #******
 
-const Button = ({ text, color, proporcion, size, shape, inverted, callback}) => {
+const Button = ({ text, color, textColor, proporcion, size, shape}) => {
 
-    const [classButton, setClassButton] = useState('');
-    const [pressed, setPressed] = useState('');
-
-    color = color ?? '#FFFFFF'; //VER COMO MAPEAR NOMBRE A CODIGO
+    color = color ?? '#FFFFFF'; 
+    textColor = textColor ?? '#FFFFFF'
 
     switch (size) {
         case 's':
@@ -38,13 +36,7 @@ const Button = ({ text, color, proporcion, size, shape, inverted, callback}) => 
             break;
     }
 
-    var textColor;
-
-    if (isDark(color))
-        textColor = '#FFFFFF';
-    else
-        textColor = '#000000';
-
+ 
     const styleButton = {
         '--primary-color': color,
         '--height': String(size + 'px'),
@@ -55,70 +47,18 @@ const Button = ({ text, color, proporcion, size, shape, inverted, callback}) => 
 
     }
 
-    /*const onMouseHandler = (event) => {
-        setClassButton(classButton + ' pressed');
-        callback (event);
-    } */   
-
-    const onMouseHandler = (pressed) => {
-        if(pressed)
-        setPressed(' pressed');
-        else
-        setPressed('');
-    }  
-
-    useEffect(() => {
-        if (inverted)
-            setClassButton('inverted');
-        else
-            setClassButton('');
-    }, [])
-
-    
-
-    console.log(classButton);
+  
     const history = useHistory();
     const navigateTo = () => history.push('/something');
     return (
-        <button style={styleButton} className={classButton + pressed} onClick= {navigateTo} 
-        onMouseDown ={() => onMouseHandler(true)} onMouseUp ={() => onMouseHandler(false)}>
+        <button style={styleButton} onClick= {navigateTo}>
             {text}
         </button>
     )
 }
 
-function isDark(color) {
-    var l;
-    console.log(color);
-    l = hexToL(color);
-    if (l < 50)
-        return true;
-    else
-        return false;
-}
 
-function hexToL(H) {
-    // Convert hex to RGB first
-    let r = 0, g = 0, b = 0;
-    if (H.length == 4) {
-        r = "0x" + H[1] + H[1];
-        g = "0x" + H[2] + H[2];
-        b = "0x" + H[3] + H[3];
-    } else if (H.length == 7) {
-        r = "0x" + H[1] + H[2];
-        g = "0x" + H[3] + H[4];
-        b = "0x" + H[5] + H[6];
-    }
-    // Then to HSL
-    r /= 255;
-    g /= 255;
-    b /= 255;
-    let cmin = Math.min(r, g, b),
-        cmax = Math.max(r, g, b),
-        l = 0;
-    l = (cmax + cmin) / 2;
-    l = +(l * 100).toFixed(1);
-    return l;
-}
+
+
 
 export default Button;

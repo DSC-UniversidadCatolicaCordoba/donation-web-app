@@ -8,8 +8,6 @@ import '../Items/item.css';
 
 export default function Item(props) {
   const {itemInfo} = props; 
-  console.log(itemInfo);
-
     return (
         <Card className="card">
           <CardContent>

@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className='search-container'>
                 <div className='row align-items-center'>
                     <div className='col-1 icon'>
-                        <img src={searchLogo} className="searchLogo"></img>
+                        <img src={searchLogo} className="searchLogo" alt=''></img>
                         <i className='fa fa-search'></i>
                     </div>
                     <div className='col-9'>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="col-1 userIcon">
-                <img src={userLogo} className="userLogo"></img>
+                <img src={userLogo} className="userLogo" alt=''></img>
             </div>
         </div>
     );

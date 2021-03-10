@@ -4,7 +4,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import Card from '../../components/Card/Card'
 import '../../styles/homepage.css';
 import { Container } from '@material-ui/core';
-import ItemList from '../../components/ItemList/ItemList'
+import NumberList from '../../components/NumberList/NumberList'
 import Button from '../../components/Button/Button'
 import Item from "../../components/Carousel/Items/Item"
 
@@ -57,21 +57,17 @@ const HomePage = () => {
             </div>
         </Container> 
     
-        <Container className="ayuda">
-            <h1 className="titulo">Como puedes ayudar?</h1>
-            
-            <Container>
-                <div className="row">
-                <div className="col">
-                <ItemList items={items1}></ItemList>
+        <Container className="d-flex p-2 ayuda">
+                <div className="d-flex flex-row">
+                <div className="col p-2">
+                <h1 className="titulo">Como puedes ayudar?</h1>
+                <NumberList items={items1}></NumberList>
                 <Button color="#2725B7" size="l" proporcion="10" text="Ir a donar" className="donar"></Button>
                 </div>
-                <div className="col imagen">
+                <div className="col p-2 imagen">
                 <img  src={'https://asepyme.com/wp-content/uploads/2019/09/don-2706851_640.jpg'} alt='' className="responsive" id="imagen"/>
                 </div>
                 </div>
-            </Container>
-           
         </Container>
 
         <Container className="registro">
@@ -79,10 +75,10 @@ const HomePage = () => {
             <h1>Como registro mi organización?</h1>
             <div className="row">
                 <div className="col">
-                <ItemList items={items2}></ItemList>
+                <NumberList items={items2}></NumberList>
                 </div>
                 <div className="col">
-                    <ItemList items={items3}></ItemList>
+                    <NumberList items={items3}></NumberList>
                 </div>
                 </div>
 

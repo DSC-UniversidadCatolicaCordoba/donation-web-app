@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {Route, Switch } from 'react-router-dom';
 
 //Components to Try
-import HelloWord from './components/HelloWord.test.js';
 
 function AppTest() {
   return (
       <Switch>
-        <Route exact path='/test/helloword' component={HelloWord}></Route>
+        <Route exact path='/test/helloword'></Route>
         {
             /*
             si tienen que probar un componente hacen lo mismo que HelloWord, crean la ruta para

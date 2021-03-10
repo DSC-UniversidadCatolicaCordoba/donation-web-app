@@ -20,7 +20,7 @@
 #imagen{
     width: 605px !important;
     height: 379px !important;
-    margin-top:-42px;
+    margin-top:0px;
     background: #E1E1E1;
     box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
